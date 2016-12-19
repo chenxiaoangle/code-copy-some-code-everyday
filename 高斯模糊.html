@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高斯模糊</title>
+	<style>
+		.wrapper{
+			background: url(tiger.jpg) 0/cover;
+            width:1024px;
+            height:720px;
+            position: relative;
+		}
+        .origin{
+            width: 300px;
+            height:200px;
+            left:362px;
+            top:0px;
+            position: absolute;
+            background: hsla(0,0%,100%,0.3);
+            text-align: center;
+            border-radius: 5px;
+            line-height:200px;
+            font-size:40px;
+            word-wrap: break-word;
+            word-break:normal;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .gaosi{
+            width: 300px;
+            height:200px;
+            left:362px;
+            top:205px;
+            position: absolute;
+            -webkit-filter: blur(1px);
+            background: hsla(0,0%,100%,0.3);
+            text-align: center;
+            border-radius: 5px;
+            line-height:200px;
+            font-size:30px;
+            word-wrap: break-word;
+            word-break:normal;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .frosted-glass{
+
+            width: 300px;
+            height:200px;
+            left:362px;
+            top:410px;
+            position: relative;
+            text-align: center;
+            border-radius: 5px;
+            line-height:200px;
+            font-size:30px;
+            word-wrap: break-word;
+            word-break:normal;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            z-index:0;
+            overflow:hidden;
+        }
+        .frosted-glass::before{
+            background: hsla(0,0%,100%,0.3);
+            content:'';
+            position: absolute;
+            top:0;right:0;bottom:0;left:0;
+            z-index:-1;
+            filter:blur(20px);
+            margin:-30px;
+        }
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="origin">There is a way</div>
+		<div class="gaosi">There is another way</div>
+		<div class="frosted-glass">Finally way</div>
+	</div>
+</body>
+</html>
